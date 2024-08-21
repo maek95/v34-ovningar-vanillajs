@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<!-- Kodexempel Måndag 19/8 (egentligen onsdag): Enkel HTML-formulärvalidering:Beskrivning:
+
+Skapa en HTML-sida med ett formulär som innehåller fält för namn, e-postadress och ett meddelande.
+
+Använd JavaScript för att validera att alla fält är ifyllda innan formuläret skickas.
+    ("required" finns redan?)
+
+Om något fält inte är ifyllt, ska ett meddelande visas under det aktuella fältet som förklarar vad som behöver fyllas i.
+ -->
+ <form id="contactForm" style="display: flex; flex-direction: column; gap: 16px; width: 300px;">
+ <!--  <form action="https://httpbin.org/anything" method="post" id="contactForm"> -->
+    <div style="display: flex; flex-direction: column;; gap: 4px">
+        <label for="name">Name</label>
+      <!-- <input type="text" required> ska "required" göra med JavaScript istället-->
+      <input id="name" type="text">
+    </div> 
+
+    <div style="display: flex; flex-direction: column;; gap: 4px; ">
+      <label for="email">Email</label>
+      <!-- <input type="text" required>  utan JavaScript-->
+      <input id="email" type="text"> <!-- type="email" will automatically warn when no @ is used -->
+    </div> 
+
+    <div style="width: 100%;">
+      <!-- border-box so width:100% takes that into consideration when calculating width... max-w-100% so the in-built function to drag the window wont extend it on the width, only the height -->
+      <label for="message">Message</label>
+      <textarea  id="message" style="width: 100%; height: 100px; box-sizing: border-box; max-width: 100%;"> 
+      </textarea>
+    </div>
+
+    <button id="contactFormSubmitButton" type="submit">Submit</button> <!-- triggers the form's submit function, and that function is handled in the index.js file -->
+  </form>
+
+
+
+  <script src="code-examples.js"></script>
+</body>
+</html>

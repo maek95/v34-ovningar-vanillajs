@@ -1,0 +1,18 @@
+- Vad är DOM-manipulation?
+
+  Genom att använda JavaScript så kan vi manipulera och lägga till element till HTML-sidan, utan att behöva ladda om sidan.
+
+  t.ex. 
+    * getElementById() - snabbt sätt att hitta ett existerade element på sidan med matchande ID (ID är unikt)
+    * querySelector() - hitta existerande element genom att titta på CSS-klasser/selektorer, och hämtar det första elementet i det som angivits... T.ex. document.querySelector("button"); hämtar första knappen eller document.querySelector("#randomID"); kan också hitta ett specifikt Id...
+    * querySelectorAll() - hitta alla existerande element som matchar den klass/selektor som angivits. T.ex. document.querySelectorAll("button"); eller document.querySelectorAll(".randomClass"); 
+
+
+- Hur används det i praktiken?
+
+Dynamiskt uppdatera sidan... Interaktiva formulär... Användargränsnitt (UI) förändringar <- typ öppna en modul när du klickar på en knapp
+
+i modern webbutveckling sköts mycket av DOM-manipulationen av ramverk som React, Vue.js, Angular, och andra liknande verktyg. Dessa ramverk abstraherar bort den direkta manipulationen av DOM och gör det enklare och mer effektivt att bygga dynamiska och interaktiva användargränssnitt.
+
+React använder en teknik som kallas Virtual DOM. Istället för att direkt ändra den verkliga DOM vid varje liten förändring, uppdaterar React en virtuell representation av DOM i minnet.
+När en komponent i React uppdateras, jämförs den nya virtuella DOM med den gamla (en process som kallas "diffing"). Bara de nödvändiga förändringarna appliceras på den riktiga DOM, vilket gör att uppdateringar blir mycket snabbare och effektivare.
